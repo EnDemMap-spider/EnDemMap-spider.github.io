@@ -20,7 +20,7 @@ import {
 
 import { makeMap, makeDraw } from "./map.js";
 
-const validPaths = ["fish", "irri", "hydro"];
+const validPaths = ["zambia", "irri", "hydro"];
 
 const initApp = (config) => {
   Vue.createApp({
@@ -130,8 +130,8 @@ const initApp = (config) => {
 
 (async () => {
   let path = window.location.pathname.split("/")[1];
-  path = validPaths.includes(path) ? path : "fish";
-  const fishYaml = await (await fetch(`./config/${path}.yml`)).text();
-  const config = jsyaml.load(fishYaml);
+  path = validPaths.includes(path) ? path : "zambia";
+  const confFile = await (await fetch(`./config/${path}.yml`)).text();
+  const config = jsyaml.load(confFile);
   initApp(config);
 })();

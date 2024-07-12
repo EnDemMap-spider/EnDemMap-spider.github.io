@@ -1,0 +1,31 @@
+name: "zambia"
+model: "models/zambia.py"
+data: "data/zambia.geojson"
+
+center: [27, -13]
+zoom: 6
+hexSize: 9
+
+popup:
+  - col: "GDP_PPP_sum"
+    label: "GDP PPP"
+    unit: "USD"
+    fmt: true
+
+infra: []
+
+pars:
+  - col: "interest_rate"
+    label: "Interest rate"
+    unit: "%"
+    min: 0
+    max: 100
+    val: 6
+
+attrs:
+  - col: "buildingssum_sum"
+    label: "num buildings"
+    min: 0
+    max: 10000
+    minCol: "hsl(60, 29%, 93%)"
+    maxCol: "hsl(60, 100%, 23%)"

@@ -1,5 +1,7 @@
 # spider-frontend
 
+This is a tool developed by [Chris Arderne](https://github.com/carderne/) for the [CCG Program](https://climatecompatiblegrowth.com/) at the University of Oxford.
+
 ## Install
 ```bash
 npm install
