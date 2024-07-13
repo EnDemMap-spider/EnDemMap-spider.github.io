@@ -7,8 +7,12 @@ zoom: 6
 hexSize: 9
 
 popup:
-  - col: "ResEnergyPerHH_index"
-    label: "Res Energy Per HH"
+  - col: "hh"
+    label: "Num households"
+    unit: ""
+    fmt: true
+  - col: "hh_access"
+    label: "Num households with access"
     unit: ""
     fmt: true
 
@@ -21,11 +25,29 @@ pars:
     min: 0
     max: 100
     val: 6
+  - col: "num_years"
+    label: "Num years"
+    unit: "%"
+    min: 10
+    max: 40
+    val: 20
 
 attrs:
-  - col: "ResEnergyPerHH_index"
-    label: "Res Energy Per HH"
+  - col: "hh"
+    label: "Num households"
     min: 0
     max: 5000
     minCol: "hsl(60, 29%, 93%)"
     maxCol: "hsl(60, 100%, 23%)"
+  - col: "res_en"
+    label: "Res energy (kWh)"
+    min: 0
+    max: 500
+    minCol: "hsl(80, 29%, 93%)"
+    maxCol: "hsl(80, 100%, 23%)"
+  - col: "tot_dem"
+    label: "Total demand (kWh)"
+    min: 0
+    max: 50
+    minCol: "hsl(30, 29%, 93%)"
+    maxCol: "hsl(30, 100%, 23%)"
