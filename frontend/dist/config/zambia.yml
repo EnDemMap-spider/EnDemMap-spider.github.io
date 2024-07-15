@@ -27,7 +27,7 @@ pars:
     val: 6
   - col: "num_years"
     label: "Num years"
-    unit: "%"
+    unit: ""
     min: 10
     max: 40
     val: 20
@@ -45,8 +45,8 @@ attrs:
     max: 500
     minCol: "hsl(80, 29%, 93%)"
     maxCol: "hsl(80, 100%, 23%)"
-  - col: "tot_dem"
-    label: "Total demand (kWh)"
+  - col: "profit"
+    label: "Calculated profit"
     min: 0
     max: 50
     minCol: "hsl(30, 29%, 93%)"
