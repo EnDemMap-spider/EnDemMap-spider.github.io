@@ -20,7 +20,7 @@ import {
 
 import { makeMap, makeDraw } from "./map.js";
 
-const validPaths = ["zambia", "irri", "hydro"];
+const validPaths = ["zambia", "zambia2", "UNUSED"];
 
 const initApp = (config) => {
   Vue.createApp({
