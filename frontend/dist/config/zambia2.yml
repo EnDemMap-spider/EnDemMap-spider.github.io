@@ -1,0 +1,41 @@
+name: "zambia2"
+model: "models/zambia2.py"
+data: "data/zambia2.geojson"
+
+center: [27, -13]
+zoom: 6
+hexSize: 6
+
+popup:
+  - col: "grid_dist"
+    label: "Grid dist"
+    unit: "km"
+    fmt: true
+
+infra:
+  - col: "grid_dist"
+    label: "Grid"
+    type: "line"
+    color: "#FF0000"
+
+pars:
+  - col: "interest_rate"
+    label: "Interest rate"
+    unit: "%"
+    min: 0
+    max: 100
+    val: 6
+  - col: "num_years"
+    label: "Num years"
+    unit: ""
+    min: 10
+    max: 40
+    val: 20
+
+attrs:
+  - col: "grid_dist"
+    label: "grid_dist"
+    min: 0
+    max: 900
+    minCol: "hsl(60, 29%, 93%)"
+    maxCol: "hsl(60, 100%, 23%)"
