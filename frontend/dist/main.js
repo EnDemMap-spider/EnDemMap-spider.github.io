@@ -20,7 +20,7 @@ import {
 
 import { makeMap, makeDraw } from "./map.js";
 
-const validPaths = ["zambia", "zambia2", "UNUSED"];
+const validPaths = ["hex", "zambia2", "UNUSED"];
 
 const initApp = (config) => {
   Vue.createApp({
@@ -130,7 +130,7 @@ const initApp = (config) => {
 
 (async () => {
   let path = window.location.pathname.split("/")[1];
-  path = validPaths.includes(path) ? path : "zambia";
+  path = validPaths.includes(path) ? path : "hex";
   const confFile = await (await fetch(`./config/${path}.yml`)).text();
   const config = jsyaml.load(confFile);
   initApp(config);

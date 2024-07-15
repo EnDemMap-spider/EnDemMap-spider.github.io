@@ -1,0 +1,49 @@
+name: "hex"
+model: "models/hex.py"
+data: "data/hex.geojson"
+
+center: [27, -13]
+zoom: 6
+hexSize: 9
+
+popup:
+  - col: "test"
+    label: "Test"
+    unit: ""
+    fmt: true
+
+infra: []
+
+pars:
+  - col: "interest_rate"
+    label: "Interest rate"
+    unit: "%"
+    min: 0
+    max: 100
+    val: 6
+  - col: "num_years"
+    label: "Num years"
+    unit: ""
+    min: 10
+    max: 40
+    val: 20
+
+attrs:
+  - col: "hh"
+    label: "Num households"
+    min: 0
+    max: 5000
+    minCol: "hsl(60, 29%, 93%)"
+    maxCol: "hsl(60, 100%, 23%)"
+  - col: "res_en"
+    label: "Res energy (kWh)"
+    min: 0
+    max: 500
+    minCol: "hsl(80, 29%, 93%)"
+    maxCol: "hsl(80, 100%, 23%)"
+  - col: "profit"
+    label: "Calculated profit"
+    min: 0
+    max: 50
+    minCol: "hsl(30, 29%, 93%)"
+    maxCol: "hsl(30, 100%, 23%)"
