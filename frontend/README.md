@@ -37,6 +37,8 @@ Use the instructions under [prep](../[prep/) to do this.
 3. Create a new `YAML` config, eg `dist/config/mining.yml`.
 You can base this on the [dist/config/example.yml](./dist/config/example.yml) file, and follow the instructions there for the necessary fields.
 Make sure it correctly points to the hexagon and model files you just created.
+Also make sure that the `name` field matches the file's name (minus the `.yml`).
+4. Then you must add the name to the `models` variable on line 27 of [dist/main.js](./dist/main.js).
 
 ### Notes on the hexagon file
 There are a few `properties` that must be included on every `Feature` in the hexagons `GeoJSON` file:
