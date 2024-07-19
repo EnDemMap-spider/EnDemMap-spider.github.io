@@ -24,7 +24,7 @@ const validPaths = ["zambia", "hex"];
 // MAKE SURE TO ADD YOUR MODEL NAME HERE
 // If you don't, it won't show up on the website
 // *********************************************
-const models = ["zambia", "hex"];
+const models = ["hex"];
 // *********************************************
 // *********************************************
 
@@ -138,7 +138,7 @@ const initApp = (config) => {
 (async () => {
   let path = window.location.pathname.split("/")[1];
   //path = validPaths.includes(path) ? path : "zambia";
-  path = models.includes(path) ? path : "zambia";
+  path = models.includes(path) ? path : "hex";
   const confFile = await (await fetch(`./config/${path}.yml`)).text();
   const config = jsyaml.load(confFile);
   initApp(config);
