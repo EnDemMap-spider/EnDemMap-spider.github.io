@@ -20,7 +20,7 @@ import {
 
 import { makeMap, makeDraw } from "./map.js";
 
-// const validPaths = ["zambia", "hex", "UNUSED"];
+const validPaths = ["zambia", "hex"];
 // MAKE SURE TO ADD YOUR MODEL NAME HERE
 // If you don't, it won't show up on the website
 // *********************************************
