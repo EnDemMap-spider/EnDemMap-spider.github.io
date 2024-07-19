@@ -20,17 +20,8 @@ import {
 
 import { makeMap, makeDraw } from "./map.js";
 
-<<<<<<< HEAD
 const validPaths = ["zambia", "hex", "UNUSED"];
-=======
-// *********************************************
-// MAKE SURE TO ADD YOUR MODEL NAME HERE
-// If you don't, it won't show up on the website
-// *********************************************
 const models = ["zambia", "hex"];
-// *********************************************
-// *********************************************
->>>>>>> ac0aa98c4fa1d62cf48c82b2f813a2df630ed6da
 
 const initApp = (config) => {
   Vue.createApp({
