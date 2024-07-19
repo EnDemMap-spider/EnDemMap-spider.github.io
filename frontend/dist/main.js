@@ -131,15 +131,18 @@ const initApp = (config) => {
       downloadLines: function () {
         downloadLines(this.drawnLines, config);
       },
+      reload: function (hash) {
+        window.location.hash = `#${hash}`;
+        location.reload();
+      },
     },
   }).mount("#sidebar");
 };
 
 (async () => {
-  let path = window.location.pathname.split("/")[1];
-  //path = validPaths.includes(path) ? path : "zambia";
-  path = models.includes(path) ? path : "zambia";
-  const confFile = await (await fetch(`./config/${path}.yml`)).text();
+  const path = window.location.hash.split("#")[1];
+  const usePath = models.includes(path) ? path : models[0];
+  const confFile = await (await fetch(`./config/${usePath}.yml`)).text();
   const config = jsyaml.load(confFile);
   initApp(config);
 })();
