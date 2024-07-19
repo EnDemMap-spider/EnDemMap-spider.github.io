@@ -20,13 +20,24 @@ import {
 
 import { makeMap, makeDraw } from "./map.js";
 
+<<<<<<< HEAD
 const validPaths = ["hex", "zambia2", "UNUSED"];
+=======
+// *********************************************
+// MAKE SURE TO ADD YOUR MODEL NAME HERE
+// If you don't, it won't show up on the website
+// *********************************************
+const models = ["zambia", "zambia2"];
+// *********************************************
+// *********************************************
+>>>>>>> ac0aa98c4fa1d62cf48c82b2f813a2df630ed6da
 
 const initApp = (config) => {
   Vue.createApp({
     data() {
       return {
         hex: {},
+        models,
         name: config.name,
         pars: config.pars,
         infra: config.infra,
@@ -130,7 +141,11 @@ const initApp = (config) => {
 
 (async () => {
   let path = window.location.pathname.split("/")[1];
+<<<<<<< HEAD
   path = validPaths.includes(path) ? path : "hex";
+=======
+  path = models.includes(path) ? path : "zambia";
+>>>>>>> ac0aa98c4fa1d62cf48c82b2f813a2df630ed6da
   const confFile = await (await fetch(`./config/${path}.yml`)).text();
   const config = jsyaml.load(confFile);
   initApp(config);

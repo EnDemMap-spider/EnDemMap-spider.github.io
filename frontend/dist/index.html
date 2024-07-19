@@ -27,6 +27,7 @@
             <div class="h-max p-4">
 
                 <!--Links to different model versions-->
+<<<<<<< HEAD
                 <div class="flex justify-evenly mb-4 font-bold">
                     <a class="hover:text-blue-700 p-2 rounded"
                        :class="{'bg-orange-400': name == 'zambia'}"
@@ -42,6 +43,17 @@
                        :class="{'bg-orange-400': name == 'unused'}"
                        href="/">
                         Unused
+=======
+                <div class="flex flex-wrap justify-evenly mb-4 font-bold">
+                      <a
+                        class="hover:text-blue-700 p-2 rounded"
+                       :class="{'bg-orange-400': name == item}"
+                        v-for="(item, index) in models"
+                        :key="index"
+                        :href=`/${item}`
+                      >
+                      {{ item }}
+>>>>>>> ac0aa98c4fa1d62cf48c82b2f813a2df630ed6da
                     </a>
                 </div>
 
