@@ -20,11 +20,11 @@ import {
 
 import { makeMap, makeDraw } from "./map.js";
 
-const validPaths = ["zambia", "hex"];
+// const validPaths = ["zambia", "hex"];
 // MAKE SURE TO ADD YOUR MODEL NAME HERE
 // If you don't, it won't show up on the website
 // *********************************************
-const models = ["hex"];
+const models = ["zambia", "hex"];
 // *********************************************
 // *********************************************
 
@@ -138,7 +138,7 @@ const initApp = (config) => {
 (async () => {
   let path = window.location.pathname.split("/")[1];
   //path = validPaths.includes(path) ? path : "zambia";
-  path = models.includes(path) ? path : "hex";
+  path = models.includes(path) ? path : "zambia";
   const confFile = await (await fetch(`./config/${path}.yml`)).text();
   const config = jsyaml.load(confFile);
   initApp(config);
