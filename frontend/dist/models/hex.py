@@ -3,7 +3,6 @@ from typing import TypedDict
 
 class Town(TypedDict):
     test: int
-    hh_access: int
 
 
 class Pars(TypedDict):

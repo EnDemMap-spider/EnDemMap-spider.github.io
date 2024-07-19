@@ -29,18 +29,6 @@ pars:
     val: 20
 
 attrs:
-  - col: "hh"
-    label: "Num households"
-    min: 0
-    max: 5000
-    minCol: "hsl(60, 29%, 93%)"
-    maxCol: "hsl(60, 100%, 23%)"
-  - col: "res_en"
-    label: "Res energy (kWh)"
-    min: 0
-    max: 500
-    minCol: "hsl(80, 29%, 93%)"
-    maxCol: "hsl(80, 100%, 23%)"
   - col: "profit"
     label: "Calculated profit"
     min: 0
