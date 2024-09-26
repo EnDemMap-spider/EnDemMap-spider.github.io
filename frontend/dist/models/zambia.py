@@ -2,8 +2,8 @@ from typing import TypedDict
 
 
 class Town(TypedDict):
-    hh: int
-    hh_access: int
+    HH_total: int
+    HHwithAccess: int
 
 
 class Pars(TypedDict):
@@ -17,7 +17,7 @@ class Result(TypedDict):
 
 def model(town: Town, pars: Pars) -> Result:
     # made-up calculation
-    profit = town["hh"] * pars["interest_rate"] + town["hh_access"] * pars["num_years"]
+    profit = town["HH_total"] * pars["interest_rate"] + town["HHwithAccess"] * pars["num_years"]
     return Result(
         profit=profit,
     )

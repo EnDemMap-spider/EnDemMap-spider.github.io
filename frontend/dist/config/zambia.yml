@@ -7,12 +7,32 @@ zoom: 6
 hexSize: 9
 
 popup:
-  - col: "hh"
+  - col: "HH_total"
     label: "Num households"
     unit: ""
     fmt: true
-  - col: "hh_access"
+  - col: "HHwithAccess"
     label: "Num households with access"
+    unit: ""
+    fmt: true
+  - col: "population"
+    label: "Population"
+    unit: ""
+    fmt: true
+  - col: "res_Bui"
+    label: "Residential Buildings"
+    unit: ""
+    fmt: true
+  - col: "REnS_GWh"
+    label: "Residential Demand (GWh)"
+    unit: ""
+    fmt: true
+  - col: "SEn_GWh"
+    label: "Social Demand (GWh)"
+    unit: ""
+    fmt: true
+  - col: "IndEnergy_GWh"
+    label: "Industrial Demand (GWh)"
     unit: ""
     fmt: true
 
@@ -33,18 +53,42 @@ pars:
     val: 20
 
 attrs:
-  - col: "hh"
+  - col: "HH_total"
     label: "Num households"
     min: 0
-    max: 5000
+    max: 50000
     minCol: "hsl(60, 29%, 93%)"
     maxCol: "hsl(60, 100%, 23%)"
-  - col: "res_en"
-    label: "Res energy (kWh)"
+  - col: "HHwithAccess"
+    label: "Num households with Access"
+    min: 0
+    max: 25000
+    minCol: "hsl(240, 29%, 93%)"
+    maxCol: "hsl(240, 100%, 23%)"
+  - col: "population"
+    label: "Population"
+    min: 0
+    max: 250000
+    minCol: "hsl(20, 29%, 93%)"
+    maxCol: "hsl(20, 100%, 23%)"
+  - col: "REnS_GWh"
+    label: "Residential Demand (GWh/year)"
     min: 0
     max: 500
-    minCol: "hsl(80, 29%, 93%)"
-    maxCol: "hsl(80, 100%, 23%)"
+    minCol: "hsl(0, 29%, 93%)"
+    maxCol: "hsl(0, 100%, 23%)"
+  - col: "SEn_GWh"
+    label: "Social Demand (GWh/year)"
+    min: 0
+    max: 500
+    minCol: "hsl(100, 29%, 93%)"
+    maxCol: "hsl(10, 100%, 23%)"
+  - col: "IndEnergy_GWh"
+    label: "Industrial Demand (GWh/year)"
+    min: 0
+    max: 5000
+    minCol: "hsl(160, 29%, 93%)"
+    maxCol: "hsl(160, 100%, 23%)"
   - col: "profit"
     label: "Calculated profit"
     min: 0
